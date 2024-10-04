@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Online Doctors - Dr Afrika</title>
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url(image/SRB.jpg) no-repeat center center/cover;
+        font-family: Arial, sans-serif;
+        color: white;
+        font-size: 1.1rem;
+        padding: 20px;
+        background-attachment: fixed;
+      }
+
+      /* Header Styles */
+      .header {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+      }
+
+      .logo {
+        text-align: center;
+        font-size: 1.8rem;
+        color: #f18930;
+      }
+
+      .nav_links {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav_links li {
+        margin: 0 15px;
+      }
+
+      .nav_links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .nav_links a:hover {
+        color: #f18930;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+
+      h3 {
+        text-align: center;
+        color: crimson;
+        margin-bottom: 20px;
+      }
+
+      /* Service Section */
+      .service {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .service ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .service ul li {
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        color: #f5f5f5;
+      }
+
+      .service ul li span {
+        font-weight: bold;
+      }
+
+      .service p {
+        line-height: 1.6;
+        color: #f5f5f5;
+        font-size: 1.2rem;
+      }
+
+      .service h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: #f18930;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #e07827;
+      }
+
+      /* Footer Styles */
+      footer {
+        margin-top: 30px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+
+      .footer-content {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .social-icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: #f18930; /* Change color on hover */
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        body {
+          font-size: 1rem;
+        }
+
+        h3 {
+          font-size: 2rem;
+        }
+
+        .nav_links {
+          flex-direction: column;
+        }
+
+        .nav_links li {
+          margin-bottom: 10px;
+        }
+
+        .about {
+          padding: 15px;
+        }
+
+        .menu-icon {
+          display: block;
+          cursor: pointer;
+        }
+
+        .header {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav_links {
+          flex-direction: column;
+          align-items: center;
+          display: none; /* Initially hide menu */
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 376px) {
+        body {
+          font-size: 0.9rem;
+        }
+
+        h3 {
+          font-size: 1.8rem;
+        }
+
+        .service {
+          padding: 10px;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+        }
+
+        .nav_links li {
+          margin-bottom: 5px;
+        }
+
+        .social-icons a {
+          font-size: 20px;
+        }
+
+        button {
+          font-size: 1rem;
+        }
+      }
+    </style>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav_links");
+        navLinks.style.display =
+          navLinks.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">Dr <span class="a">A</span>frika</a>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav>
+        <ul class="nav_links">
+          <li class="link"><a href="about.html">About Dr</a></li>
+          <li class="link"><a href="service.html">Services</a></li>
+          <li class="link"><a href="doctors.html">Doctors</a></li>
+          <li class="link"><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Services Section -->
+    <section class="service">
+      <h3>Our Services</h3>
+      <ul>
+        <li>General Check-ups</li>
+        <li>Specialized Treatment</li>
+        <li>Emergency Care</li>
+      </ul>
+      <p class="ser">
+        Our doctors offer the following services: General check-ups, often
+        referred to as primary care physicians (PCPs) or general practitioners
+        (GPs), provide a wide range of healthcare services, including:
+      </p>
+      <hr />
+      <ul class="two">
+        <li>
+          Routine Physical Exams: Annual check-ups to assess overall health for
+          ages 5 years to adult.
+        </li>
+        <li>
+          Preventive Care: Vaccinations, screenings (e.g., blood pressure,
+          cholesterol, asthma), and lifestyle counseling.
+        </li>
+        <li>
+          Management of Chronic Conditions: Ongoing care for conditions like
+          asthma, diabetes, and hypertension.
+        </li>
+        <li>
+          Diagnosis and Treatment of Acute Illnesses: Handling common illnesses
+          such as colds, flu, minor injuries, and infections.
+        </li>
+        <li>
+          Referrals to Specialists: Coordinating care with specialists for more
+          complex health issues.
+        </li>
+        <li>
+          Health Education and Counseling: Advice on diet, exercise, stress
+          management, and other health concerns.
+        </li>
+        <li>
+          Routine Laboratory Tests: Blood tests, urine tests, and other
+          diagnostics.
+        </li>
+        <li>Medication Management: Prescribing and monitoring medications.</li>
+        <li>
+          Mental Health Support: Initial assessment and treatment of mental
+          health issues like depression and anxiety.
+        </li>
+      </ul>
+
+      <p>
+        Here are some examples of specialists and the types of treatments we
+        offer:
+      </p>
+      <ul class="four">
+        <li>
+          Cardiologists: Treatment of heart conditions such as coronary artery
+          disease, heart failure, and arrhythmias. Procedures like angioplasty,
+          stent placement, and echocardiograms.
+        </li>
+        <li>
+          Dermatologists: Treatment of skin conditions such as acne, eczema,
+          psoriasis, and skin cancer. Procedures like skin biopsies, mole
+          removal, and cosmetic treatments.
+        </li>
+        <li>
+          Endocrinologists: Management of hormonal disorders like diabetes,
+          thyroid diseases, and osteoporosis. Treatment plans involving
+          medication, hormone replacement therapy, and lifestyle modifications.
+        </li>
+        <li>
+          Neurologists: Treatment of neurological disorders such as epilepsy,
+          Parkinson's disease, multiple sclerosis, and migraines. Diagnostic
+          tests like EEGs, MRIs, and lumbar punctures.
+        </li>
+        <li>
+          Oncologists: Treatment of cancers using chemotherapy, radiation
+          therapy, and immunotherapy. Coordination of care with surgeons and
+          radiologists for comprehensive cancer treatment.
+        </li>
+        <li>
+          Pulmonologists: Treatment of lung and respiratory conditions like
+          asthma, COPD, and pulmonary fibrosis. Diagnostic tests like
+          spirometry, bronchoscopy, and sleep studies.
+        </li>
+        <li>
+          Psychiatrists: Treatment of mental health conditions such as
+          depression, anxiety, bipolar disorder, and schizophrenia. Therapies
+          including medication management, psychotherapy, and cognitive
+          behavioral therapy (CBT).
+        </li>
+        <li>
+          Urologists: Treatment of urinary tract and male reproductive system
+          issues like urinary incontinence, kidney stones, and prostate
+          problems. Procedures like cystoscopy, prostate biopsy, and surgical
+          interventions.
+        </li>
+      </ul>
+
+      <p>
+        In South Africa, online doctors and telemedicine services have become
+        increasingly popular, especially following the COVID-19 pandemic. These
+        services allow patients to consult with healthcare professionals
+        remotely, typically via video calls, phone calls, or chat platforms.
+      </p>
+      <ul class="six">
+        <li>
+          Accessibility and Convenience: Online doctor services provide greater
+          accessibility for people living in remote or rural areas where
+          healthcare facilities might be scarce. We also offer convenience for
+          those with busy schedules, reducing the need for travel and waiting
+          times.
+        </li>
+        <li>
+          Range of Services: Telemedicine in South Africa covers a broad range
+          of services including general consultations, follow-up appointments,
+          prescription renewals, mental health support, and specialist
+          consultations.
+        </li>
+      </ul>
+
+      <!-- Registration Button -->
+      <form>
+        <a href="Register-patient.html" class="button">Register Now!</a>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Dr Afrika. All rights reserved.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

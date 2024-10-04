@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Online Doctors - Dr Afrika</title>
+
+    <style>
+      /* Flexbox layout to keep footer at the bottom */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        background: url(https://images.pexels.com/photos/4386495/pexels-photo-4386495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+        background-position: center;
+        background-size: cover;
+      }
+
+      html,
+      body {
+        overflow-x: hidden; /* Prevent horizontal scroll */
+      }
+
+      main {
+        flex: 1; /* Takes up remaining space between header and footer */
+        padding-bottom: 2rem; /* Just to give some space above the footer */
+      }
+
+      h1 {
+        font-size: xx-large;
+        font-family: "Roboto", sans-serif;
+        background-color: lightblue;
+        text-align: center;
+        font-style: italic;
+        margin: 1rem auto;
+        height: 3rem;
+        color: black;
+        line-height: 3rem;
+      }
+
+      span {
+        font-size: xx-large;
+        font-weight: 1000;
+        font-style: normal;
+        color: crimson;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #eebcbc;
+        border-radius: 4px;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #f18930;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .inside {
+        background-color: lightblue;
+        background-position-x: right;
+        margin: 20px;
+        width: 50%;
+        padding: 45px;
+        padding-right: 33px;
+
+        display: inline-flex;
+        justify-content: center;
+        border-radius: 7px;
+      }
+
+      .Office {
+        background-color: lightblue;
+        margin: 20px;
+        width: 50%;
+        padding: 20px;
+        padding-top: 48px;
+        border-radius: 7px;
+      }
+
+      .details p {
+        font-size: large;
+        color: black; /* Set p color to black */
+      }
+
+      footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .footer-content {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .Office > p {
+        color: black;
+      }
+
+      .social-icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: #f18930;
+      }
+
+      /* Mobile styles */
+      @media (max-width: 768px) {
+        .nav_links {
+          flex-direction: column;
+          align-items: center;
+          display: none;
+          width: 100%;
+        }
+
+        .menu-icon {
+          display: block;
+          cursor: pointer;
+        }
+      }
+    </style>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav_links");
+        navLinks.style.display =
+          navLinks.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">Dr <span class="a">A</span>frika</a>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav>
+        <ul class="nav_links">
+          <li class="link"><a href="about.html">About Dr</a></li>
+          <li class="link"><a href="service.html">Services</a></li>
+          <li class="link"><a href="doctors.html">Doctors</a></li>
+          <li class="link"><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Main Content -->
+      <section class="contact">
+        <h1>Con<span>t</span>act Us</h1>
+        <div class="container">
+          <div class="inside">
+            <form action="/submit_form.php" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required /><br />
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required /><br />
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea><br />
+
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required /><br />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+
+          <div class="Office">
+            <p class="details">
+              Phone: +277 7172 11907 <br />
+              Email: Luwieluxolo@gmail.com <br />
+              Doctors Operating Hours: <br />
+              Monday - Friday: 08:00 - 20:00 <br />
+              Saturday - Sunday: 08:00 - 14:00 <br />
+              Public Holidays: 08:00 - 14:00
+            </p>
+
+            <p class="details">
+              Support Operating Hours: <br />
+              Monday - Friday: 08:00 - 17:00 <br />
+              Saturday: 09:00 - 13:00 <br />
+              Sunday and Public Holidays: Closed <br />
+              <span
+                >Note: Online booking during Sunday and Public Holidays will not
+                be considered!</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Dr Afrika. All Rights Reserved.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

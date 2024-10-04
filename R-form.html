@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Online Doctors - Dr Afrika</title>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        overflow-x: hidden; /* Prevent horizontal scroll */
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: url(https://images.pexels.com/photos/6163727/pexels-photo-6163727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+
+      /* Navigation Bar Styles */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        position: relative;
+        z-index: 10; /* Ensures the nav stays above other content */
+      }
+
+      .logo a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+      }
+
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      nav ul li a:hover {
+        color: #f18930;
+      }
+
+      nav_links.active {
+        display: flex; /* Show the menu when active class is toggled */
+      }
+
+      /* Media Query for Mobile Devices */
+      @media (max-width: 768px) {
+        nav ul {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          background-color: rgba(0, 0, 0, 0.9);
+          width: 200px;
+          border-radius: 8px;
+          padding: 15px;
+          z-index: 20; /* Keeps dropdown menu on top */
+        }
+
+        nav ul.active {
+          display: flex;
+        }
+
+        .menu-icon {
+          display: block;
+        }
+      }
+
+      /* Main Content Section */
+      .section {
+        max-width: 500px;
+        margin: 50px auto;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 1; /* Ensures form stays under nav */
+      }
+
+      .section h1 {
+        font-size: 2rem;
+        color: #007bff;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .section h1 span {
+        color: crimson;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .inside {
+        width: 100%;
+      }
+
+      .inside form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .inside label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .inside input[type="text"],
+      .inside input[type="email"],
+      .inside input[type="password"],
+      .inside input[type="date"] {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      .inside button {
+        padding: 12px;
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .inside button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Footer Styles */
+      footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+      }
+
+      .footer-content {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .social-icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: #f18930;
+      }
+    </style>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav_links");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">Dr <span class="a">A</span>frika</a>
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav>
+        <ul class="nav_links">
+          <li class="link"><a href="about.html">About Dr</a></li>
+          <li class="link"><a href="service.html">Services</a></li>
+          <li class="link"><a href="doctors.html">Doctors</a></li>
+          <li class="link"><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="section">
+      <h1>Regis<span>t</span>er</h1>
+      <div class="container">
+        <div class="inside">
+          <form action="/submit_form.php" method="post">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required />
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password" required />
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              required
+            />
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Dr Afrika. All Rights Reserved.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

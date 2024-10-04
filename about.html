@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Correct Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Online Doctors - Dr Afrika</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url(https://images.pexels.com/photos/4167543/pexels-photo-4167543.jpeg?cs=srgb&dl=pexels-shvetsa-4167543.jpg&fm=jpg&_gl=1*1sk6pc9*_ga*MTI0NjAxMDkzOS4xNzE3ODcwMzU0*_ga_8JE65Q40S6*MTcxOTM3NTAzNy4xMC4xLjE3MTkzNzUwNzMuMC4wLjA.)
+            no-repeat center center/cover;
+        font-family: Arial, sans-serif;
+        color: white;
+        font-size: 1.1rem;
+        padding: 20px;
+        background-attachment: fixed;
+      }
+
+      .header {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .nav_links {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .nav_links li {
+        margin: 0 15px;
+      }
+
+      .nav_links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .nav_links a:hover {
+        color: #f18930;
+      }
+
+      h3.Dr {
+        font-size: 2.5rem;
+        text-align: center;
+        color: crimson;
+        margin-bottom: 20px;
+      }
+
+      .about {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .about p {
+        line-height: 1.6;
+        color: #f5f5f5;
+        font-size: 1.2rem;
+      }
+
+      .Welcome {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      /* Individual sections font color */
+      .Accessibility,
+      .convenience,
+      .facilitate,
+      .connect,
+      .consultations {
+        color: #e0e0e0;
+      }
+
+      /* Footer styles */
+      footer {
+        margin-top: 30px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+
+      .footer-content {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .social-icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: #f18930; /* Change color on hover */
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 768px) {
+        body {
+          font-size: 1rem;
+        }
+
+        h3.Dr {
+          font-size: 2rem;
+        }
+
+        .about {
+          padding: 15px;
+        }
+
+        .nav_links {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+
+      /* For mobile phones and smaller screens */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav_links {
+          flex-direction: column;
+          align-items: center;
+          display: none; /* Initially hide menu */
+          width: 100%;
+        }
+
+        h3.Dr {
+          font-size: 1.8rem;
+        }
+
+        .nav_links li {
+          margin: 0 5px;
+        }
+
+        .nav_links a {
+          font-size: 1rem;
+        }
+
+        .about {
+          padding: 10px;
+        }
+
+        footer p {
+          font-size: 0.8rem;
+        }
+
+        .social-icons a {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector(".nav_links");
+      navLinks.style.display =
+        navLinks.style.display === "block" ? "none" : "block";
+    }
+  </script>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">Dr <span class="a">A</span>frika</a>
+      </div>
+
+      <!-- Hamburger icon for mobile -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav>
+        <ul class="nav_links">
+          <li class="link"><a href="about.html">About Dr</a></li>
+          <li class="link"><a href="service.html">Services</a></li>
+          <li class="link"><a href="doctors.html">Doctors</a></li>
+          <li class="link"><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h3 class="Dr">About <span class="abt">Dr Afrika</span></h3>
+
+    <section class="about">
+      <p class="Welcome">
+        Welcome to our medical center. We strive to provide high-quality care to
+        our patients.
+      </p>
+
+      <p class="Accessibility">
+        Accessibility and Convenience: Online doctor services provide greater
+        accessibility for people in remote or rural areas where healthcare
+        facilities might be scarce.
+      </p>
+
+      <p class="convenience">
+        We also offer convenience for those with busy schedules, reducing the
+        need for travel and waiting times. Our services cover a broad range of
+        medical consultations including general consultations, prescription
+        renewals, and mental health support.
+      </p>
+
+      <p class="facilitate">
+        Platforms like Dr Afrika offer integrated health services, including
+        video consultations with doctors, making it easy for patients to receive
+        medical advice and consultations online.
+      </p>
+
+      <p class="connect">
+        Patients can connect with our doctors through video calls for various
+        medical needs. We are regulated by the Health Professions Council of
+        South Africa (HPCSA) to ensure high standards of care and
+        professionalism.
+      </p>
+
+      <p class="consultations">
+        We provide free consultations in rural areas and offer free medical
+        transportation for disabled and elderly people. Our online doctor
+        services are transforming healthcare by making it more accessible and
+        convenient for a wide range of patients.
+      </p>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Dr Afrika. All rights reserved.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

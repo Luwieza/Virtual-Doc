@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Online Doctors - Dr Afrika</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">Dr <span class="a">A</span>frika</a>
+      </div>
+
+      <!-- Hamburger icon for mobile -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav>
+        <ul class="nav_links">
+          <li class="link"><a href="about.html">About Dr</a></li>
+          <li class="link"><a href="service.html">Services</a></li>
+          <li class="link"><a href="doctors.html">Doctors</a></li>
+          <li class="link"><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="showcase">
+      <div class="overlay">
+        <h1>A Real Doctor is Available<span> Right Now!</span></h1>
+
+        <form>
+          <a href="service.html" class="button">See a Doctor Now</a>
+        </form>
+
+        <p>
+          Capturing the beauty of medicine through the lens of online Doctors!
+        </p>
+        <h2>Discover How Online Doctor Consultations with Dr. Afrika Work</h2>
+        <h4>We have doctors ready and waiting to see you online right now.</h4>
+      </div>
+    </section>
+
+    <section>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> Luwieluxolo@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i> +27 77 172 11907</p>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 03 Oak Street, King Williams
+              Town
+            </p>
+          </div>
+
+          <div class="footer-content">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="service.html">Service</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-content">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+              <li>
+                <a href="https://www.facebook.com" target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com" target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bottom-bar">
+          <p>&copy; 2024 Dr Afrika. All rights reserved.</p>
+        </div>
+      </footer>
+    </section>
+
+    <script>
+      // Function to toggle menu visibility on smaller screens
+      function toggleMenu() {
+        var navLinks = document.querySelector(".nav_links");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
