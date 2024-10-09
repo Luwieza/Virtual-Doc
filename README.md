@@ -4,7 +4,7 @@
 
 This is the main marketing website for Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
 
-<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/image/hero.png"></h2>
+<h2 align="center"><img src="hero.png"></h2>
 
     -   #### Returning Visitor Goals
 
