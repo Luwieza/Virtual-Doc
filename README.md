@@ -1,10 +1,11 @@
 <h1 align="center">Dr Afrika</h1>
 
-[View the live project here.](https://codeinstitute.net)
+[View the live project here.](https://luwieza.github.io/Virtual-Doc/)
 
 This is the main marketing website for Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
 
-<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
+<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/hero.png"></h2>
+
 
 ## User Experience (UX)
 
@@ -32,7 +33,7 @@ This is the main marketing website for Code Institute. It is designed to be resp
         -   The two main colours used are white, red, black and yellow.
     -   #### Typography
         -   The Roboto", sans-serif font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly.
-        
+
     -   #### Imagery
         -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
