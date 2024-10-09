@@ -28,7 +28,7 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
 *   ### Wireframes
 
-    -   Home Page Wireframe - [View](https://github.com/)
+    -   Home Page Wireframe - [View](hero.png)
 
     -   Mobile Wireframe - [View](https://github.com/)
 
