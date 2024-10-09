@@ -4,18 +4,7 @@
 
 This is the main marketing website for Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
 
-<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/image/hero.png"></h2>
-
-
-## User Experience (UX)
-
--   ### User stories
-
-    -   #### First Time Visitor Goals
-
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
+<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/image/hero.png>md
 
     -   #### Returning Visitor Goals
 
