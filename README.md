@@ -32,7 +32,7 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
     -   Mobile Wireframe - [View](https://github.com/)
 
-    -   Contact Us Page Wireframe - [View](https://github.com/)
+    -   Contact Us Page Wireframe - [View](https://luwieza.github.io/Virtual-Doc/contact.html)
 
 ## Features
 
