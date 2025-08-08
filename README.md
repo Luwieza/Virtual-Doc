@@ -2,7 +2,7 @@
 
 [View the live project here.](https://luwieza.github.io/Virtual-Doc/)
 
-This is the main marketing website for Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
+This is the main marketing website. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
 
 <h2 align="center"><img src="image/hero.png"></h2>
 
